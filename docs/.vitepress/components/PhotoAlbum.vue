@@ -71,15 +71,15 @@ provide('registerPhoto', (photo) => {
 
 <style scoped>
 .photo-album {
-    width: 50vw;
-    margin: 20px auto;
+    width: clamp(300px, 45rem, 800px);
+    margin: 1.25rem auto;
     text-align: center;
 }
 
 .album-signature {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1rem, 1.2rem);
     color: #ff8787;
-    margin-bottom: 15px;
+    margin-bottom: 0.9rem;
     font-style: italic;
 }
 
@@ -92,21 +92,28 @@ provide('registerPhoto', (photo) => {
 
 .photo-frame {
     background: #fdebeb;
-    border-radius: 12px;
-    padding: 25px;
+    border-radius: 0.75rem;
+    padding: clamp(0.625rem, 1.5rem, 1.6rem);
     box-shadow: 0 4px 10px rgba(255, 107, 107, 0.25);
-    max-width: 100%;
+    width: 100%;
+    height: clamp(200px, 30rem, 500px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .photo-frame img {
-    width: 45vw;
-    height: 50vh;
-    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
 }
 
 .photo-info p {
-    margin: 10px 0 0;
+    margin: 0.6rem 0 0;
     color: #555;
+    font-size: clamp(0.8rem, 1rem, 1.1rem);
 }
 
 .nav-btn {
@@ -116,8 +123,8 @@ provide('registerPhoto', (photo) => {
     background: rgba(255, 107, 107, 0.3);
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: clamp(35px, 2.5rem, 50px);
+    height: clamp(35px, 2.5rem, 50px);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -136,24 +143,25 @@ provide('registerPhoto', (photo) => {
 }
 
 .nav-btn.left {
-    left: -15px;
+    left: -0.6rem;
 }
 
 .nav-btn.right {
-    right: -15px;
+    right: -0.6rem;
 }
 
 .thumbnails {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    gap: 12px;
+    margin-top: 1.25rem;
+    gap: clamp(5px, 0.75rem, 12px);
+    flex-wrap: wrap;
 }
 
 .thumb {
-    width: 80px;
-    height: 80px;
-    border-radius: 6px;
+    width: clamp(50px, 5rem, 80px);
+    height: clamp(50px, 5rem, 80px);
+    border-radius: 0.375rem;
     overflow: hidden;
     cursor: pointer;
     border: 2px solid transparent;
@@ -170,33 +178,22 @@ provide('registerPhoto', (photo) => {
     object-fit: cover;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
     .photo-album {
-        width: 80vw;
-        margin: 15px auto;
-    }
-
-    .photo-frame img {
-        width: 90vw;
-        height: auto;
+        width: 95%;
+        margin: 0.6rem auto;
     }
 
     .photo-frame {
-        padding: 15px;
+        height: clamp(180px, 20rem, 320px);
     }
 
-    .nav-btn {
-        width: 40px;
-        height: 40px;
+    .nav-btn.left {
+        left: 0.3rem;
     }
 
-    .thumbnails {
-        gap: 8px;
-    }
-
-    .thumb {
-        width: 60px;
-        height: 60px;
+    .nav-btn.right {
+        right: 0.3rem;
     }
 }
 </style>

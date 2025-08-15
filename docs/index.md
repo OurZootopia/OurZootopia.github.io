@@ -13,9 +13,9 @@ hero:
     - theme: brand
       text: Memories
       link: /memories
-    # - theme: alt
-    #   text: Daily Life
-    #   link: /api-examples
+    - theme: alt
+      text: Daily Life
+      link: /dailylife/2025-06-28
 
 # features:
 #   - title: Feature A
