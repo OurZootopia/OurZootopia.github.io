@@ -1,5 +1,5 @@
 <template>
-    <div class="wish-item" :class="{ done }" @click="toggle">
+    <div class="bucket-list-item" :class="{ done }" @click="toggle">
         <span class="checkbox">{{ done ? '❤️' : '🤍' }}</span>
         <span class="text">
             <slot />
@@ -29,22 +29,22 @@ function toggle() {
 </script>
 
 <style scoped>
-.wish-item {
+.bucket-list-item {
     display: flex;
     align-items: center;
-    padding: 8px 10px;
-    margin-bottom: 8px;
+    padding: 16px 14px;
+    margin-bottom: 18px;
     border-radius: 8px;
     background: white;
     cursor: pointer;
     transition: background 0.2s;
 }
 
-.wish-item:hover {
+.bucket-list-item:hover {
     background: #ffeaea;
 }
 
-.wish-item.done .text {
+.bucket-list-item.done .text {
     text-decoration: line-through;
     color: #aaa;
 }
@@ -57,5 +57,6 @@ function toggle() {
 .text {
     flex: 1;
     font-size: 1rem;
+    font-family: Dancing Script;
 }
 </style>

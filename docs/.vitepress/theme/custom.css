@@ -1,0 +1,92 @@
+.VPHero {
+    margin-top: calc((var(--vp-nav-height) + var(--vp-layout-top-height, 0px)) * -1);
+    padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 48px) 24px 48px;
+}
+
+@media (min-width: 640px) {
+    .VPHero {
+        padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 80px) 48px 64px;
+    }
+}
+
+@media (min-width: 960px) {
+    .VPHero {
+        padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 140px) 64px 64px !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .VPHero .name {
+        line-height: 180px;
+        font-size: 130px;
+        padding: 20px;
+    }
+
+    .VPHero .text {
+        line-height: 100px;
+        font-size: 66px;
+        padding: 20px;
+    }
+
+    .VPHero .tagline {
+        line-height: 60px;
+        font-size: 55px;
+        padding: 20px;
+        font-family: 'Dancing Script';
+    }
+}
+
+@media (max-width: 960px) {
+    .VPHero .name {
+        line-height: 70px;
+        font-size: 60px;
+        padding: 60px 0 0 0;
+    }
+
+    .VPHero .text {
+        line-height: 50px;
+        font-size: 40px;
+        padding: 20px 0 0 0;
+    }
+
+    .VPHero .tagline {
+        line-height: 50px;
+        font-size: 40px;
+        padding: 20px 0 0 0;
+        font-family: 'Dancing Script';
+    }
+}
+
+.VPHero .VPButton.medium {
+    border-radius: 30px;
+    padding: 4px 24px;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+.VPHero .actions {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 20px;
+    gap: 10px;
+}
+
+@media (min-width: 960px) {
+    .VPHero .image-container {
+        transform: translate(0px, 0px);
+    }
+}
+
+.VPNav .title {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.VPNav .VPNavBarMenuLink{
+    font-size: 18px;
+}
+
+.VPNav .container {
+    padding: 15px 0;
+}

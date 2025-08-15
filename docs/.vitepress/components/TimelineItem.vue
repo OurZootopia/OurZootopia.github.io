@@ -34,9 +34,10 @@ defineProps({
 
 .timeline-content {
   background: #fff5f5;
-  padding: 10px 15px;
+  padding: 16px 20px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(255, 107, 107, 0.2);
+  width: 48vw;
 }
 
 .timeline-date {
