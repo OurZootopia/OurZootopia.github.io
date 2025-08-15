@@ -169,4 +169,34 @@ provide('registerPhoto', (photo) => {
     height: 100%;
     object-fit: cover;
 }
+
+@media (max-width: 1000px) {
+    .photo-album {
+        width: 80vw;
+        margin: 15px auto;
+    }
+
+    .photo-frame img {
+        width: 90vw;
+        height: auto;
+    }
+
+    .photo-frame {
+        padding: 15px;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .thumbnails {
+        gap: 8px;
+    }
+
+    .thumb {
+        width: 60px;
+        height: 60px;
+    }
+}
 </style>
