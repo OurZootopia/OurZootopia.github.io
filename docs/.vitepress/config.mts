@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Daily Us",
   description: "🦊 🐇",
-  head: [['link', { rel: 'icon', href: '/avatar.png' }]],
+  head: [['link', { rel: 'icon', href: '/assets/avatar.png' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -15,8 +15,14 @@ export default defineConfig({
       {
         text: 'Memories',
         items: [
-          { text: 'Timeline', link: '/memories/index' },
-          { text: 'WishList', link: '/memories/wishlist'}
+          { text: 'Timeline', link: '/memories/' },
+          { text: 'Bucket List', link: '/memories/bucketlist'}
+        ]
+      },
+      {
+        text: "Daily Life",
+        items: [
+            {text: '2025.06.28', link: 'dailylife/2025-06-28'}
         ]
       }
     ],

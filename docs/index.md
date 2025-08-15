@@ -7,7 +7,7 @@ hero:
   # text: "🦊 🐇"
   tagline: You know you love me~
   image:
-    src: /avatar.png
+    src: /assets/avatar.png
     alt: avatar
   actions:
     - theme: brand
