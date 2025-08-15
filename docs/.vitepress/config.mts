@@ -16,13 +16,15 @@ export default defineConfig({
         text: 'Memories',
         items: [
           { text: 'Timeline', link: '/memories/' },
-          { text: 'Bucket List', link: '/memories/bucketlist'}
+          { text: 'Bucket List', link: '/memories/bucketlist' }
         ]
       },
       {
         text: "Daily Life",
         items: [
-            {text: '2025.06.28', link: 'dailylife/2025-06-28'}
+          { text: '2025.06.28', link: 'dailylife/2025-06-28' },
+          { text: '2025.06.30', link: 'dailylife/2025-06-30' },
+          { text: '2025.07.02', link: 'dailylife/2025-07-02' }
         ]
       }
     ],

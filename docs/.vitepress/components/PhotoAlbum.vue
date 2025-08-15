@@ -3,7 +3,7 @@
         <p v-if="albumSignature" class="album-signature">{{ albumSignature }}</p>
 
         <div v-if="photos.length" class="photo-frame-wrapper">
-            <button class="nav-btn left" @click="prev" :disabled="currentIndex === 0">
+            <button class="nav-btn left" @click="prev" :disabled="currentIndex === 0" v-if="photos.length > 1">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="url(#grad-left)">
                     <defs>
                         <linearGradient id="grad-left" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <button class="nav-btn right" @click="next" :disabled="currentIndex === photos.length - 1">
+            <button class="nav-btn right" @click="next" :disabled="currentIndex === photos.length - 1" v-if="photos.length > 1">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="url(#grad-right)">
                     <defs>
                         <linearGradient id="grad-right" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -37,7 +37,7 @@
             </button>
         </div>
 
-        <div class="thumbnails" v-if="photos.length">
+        <div class="thumbnails" v-if="photos.length > 1">
             <div v-for="(photo, index) in photos" :key="index" class="thumb" :class="{ active: index === currentIndex }"
                 @click="currentIndex = index">
                 <img :src="photo.src" />
